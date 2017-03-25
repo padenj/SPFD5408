@@ -21,7 +21,7 @@
 // Calibrates value
 #define SENSIBILITY 300
 #define MINPRESSURE 10
-#define MAXPRESSURE 1000
+#define MAXPRESSURE 10000
 
 //These are the pins for the shield!
 #define YP A1 
@@ -36,10 +36,16 @@
 #define TS_MAXX 920
 #define TS_MAXY 940
 */
-short TS_MINX=150;
-short TS_MINY=120;
-short TS_MAXX=920;
-short TS_MAXY=940;
+//short TS_MINX=150;
+//short TS_MINY=120;
+//short TS_MAXX=920;
+//short TS_MAXY=940;
+//
+short TS_MINX = 125;
+short TS_MINY = 105;
+short TS_MAXX = 910;
+short TS_MAXY = 890;
+
 
 // Init TouchScreen:
 
@@ -97,7 +103,7 @@ void setup(void) {
   
   tft.begin(0x9341);
 
-  tft.setRotation(0); // Need for the Mega, please changed for your choice or rotation initial
+  tft.setRotation(4); // Need for the Mega, please changed for your choice or rotation initial
 
   width = tft.width() - 1;
   height = tft.height() - 1;
